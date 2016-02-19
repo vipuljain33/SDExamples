@@ -1,5 +1,7 @@
 package examples;
 
+import java.awt.geom.Ellipse2D;
+
 public class BinaryTreeNode {
 	
 	private int data;
@@ -74,4 +76,30 @@ public class BinaryTreeNode {
 		}
 	}
 
+	public int maxInBinaryTree(BinaryTreeNode root)
+	{
+		int maxValue = 0;
+		if(root != null)
+		{
+			int leftMax = maxInBinaryTree(root.getLeft());
+			int rightMax = maxInBinaryTree(root.getRight());
+			
+			if(leftMax > rightMax )
+			{
+				maxValue = leftMax;
+			}else {
+				
+				maxValue = rightMax;
+				
+			}
+			
+			if(root.getData() > maxValue)
+			{
+				maxValue = root.getData();
+			}
+		}
+		
+		return maxValue;
+	}
+	
 }

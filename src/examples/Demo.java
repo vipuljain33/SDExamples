@@ -28,6 +28,13 @@ public class Demo {
 		
 		System.out.println("Postorder Traversal results are");
 		node.postOrderTraversal(node);
+		
+		System.out.println("Max value in Binarytree");
+		int maxvalue = node.maxInBinaryTree(node);
+		System.out.println("Max value in binary tree = " + maxvalue);
+		
+		
+		
 
 	}
 

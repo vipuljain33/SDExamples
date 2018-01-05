@@ -6,17 +6,21 @@ public class Demo {
 		
 		
 		BinaryTreeNode node = new BinaryTreeNode(5);
+
 		node.setLeft(new BinaryTreeNode(10));
 		int data = node.getData();
 		System.out.println(data);
 		data = node.getLeft().getData();
 		System.out.println(data);
+
 		node.setRight(new BinaryTreeNode(15));
 		data = node.getRight().getData();
 		System.out.println(data);
+
 		node.getLeft().setLeft(new BinaryTreeNode(20));
 		data = node.getLeft().getLeft().getData();
 		System.out.println(data);
+
 		node.getRight().setRight(new BinaryTreeNode(30));
 		data = node.getRight().getRight().getData();
 		System.out.println(data);
@@ -26,12 +30,27 @@ public class Demo {
 		System.out.println("Inorder Traversal Results are :-");
 		node.inOrderTraversal(node);
 		
-		System.out.println("Postorder Traversal results are");
+		System.out.println("Postorder Traversal results are :-");
 		node.postOrderTraversal(node);
+
+		System.out.println("Level Order Traversal results are :-");
+		node.levelOrderTraversal(node);
 		
 		System.out.println("Max value in Binarytree");
 		int maxvalue = node.maxInBinaryTree(node);
 		System.out.println("Max value in binary tree = " + maxvalue);
+
+		System.out.println(node.height(node));
+
+		node.insert(node, 40);
+		node.insert(node, 50);
+		node.insert(node, 60);
+		node.insert(node, 60);
+
+		System.out.println("Level Order Traversal results are :-");
+		node.levelOrderTraversal(node);
+
+
 		
 		
 		

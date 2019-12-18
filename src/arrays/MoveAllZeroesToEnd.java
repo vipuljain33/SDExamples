@@ -13,6 +13,12 @@ public class MoveAllZeroesToEnd {
             System.out.print(returned[i]+ " ");
         }
 
+        int[] result = moveAllZeroesToEnd2(arr);
+        for(int a : result)
+        {
+            System.out.println(a);
+        }
+
     }
 
     public static int[] moveAllZeroesToEnd(int[] arr)
@@ -34,6 +40,25 @@ public class MoveAllZeroesToEnd {
             count++;
         }
         return arr;
+    }
+
+    public static int[] moveAllZeroesToEnd2(int[] a)
+    {
+        int boundary = a.length-1;
+        int temp = 0;
+        for(int i = a.length-1; i >= 0; i--)
+        {
+            if(a[i] == 0)
+            {
+                temp = a[boundary];
+                a[boundary] = a[i];
+                a[i] = temp;
+                boundary --;
+            }
+
+        }
+
+        return a;
     }
 
 }

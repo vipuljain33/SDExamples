@@ -8,3 +8,5 @@ Like some ducks can fly and some ducks cant fly. So we have two different implem
 I have identified the aspects of the application that varies and have separated them from what stays the same
 
 So now fly and quack behavior are not a part of Duck superclass. Instead they exist as independent interfaces.
+
+This is the implementation of Strategy Design Pattern that lets the algorithm vary independently from clients that use it.

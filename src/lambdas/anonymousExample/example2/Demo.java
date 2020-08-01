@@ -14,10 +14,11 @@ class Test{
 
     public void m2()
     {
+        int x = 20;
         Demo d = () -> {
 
-            int x = 20;
             System.out.println(x);
+
         };
 
         d.m1();

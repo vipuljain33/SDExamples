@@ -2,6 +2,7 @@ package predefinedInterfaces.functions;
 
 import java.util.ArrayList;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class Demo2 {
 
@@ -43,11 +44,17 @@ public class Demo2 {
 
         };
 
+        Predicate<Student> p = student -> student.marks > 60;
+
+
 
         for(Student s : students)
         {
-            System.out.print(s.name + " "+ s.marks + " "+ fun.apply(s));
-            System.out.println();
+            if(p.test(s)) {
+
+                System.out.print("name: " + s.name + " " + "marks: " + s.marks + " " + "Grade: " + fun.apply(s));
+                System.out.println();
+            }
         }
 
 

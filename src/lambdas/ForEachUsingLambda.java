@@ -18,5 +18,14 @@ public class ForEachUsingLambda {
                 (n)->System.out.println(n)
         );
 
+
+        int a = new Integer(10);
+
+        System.out.println(a);
+
+
+
+
+
     }
 }
